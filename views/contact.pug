@@ -1,0 +1,159 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title=title 
+  link(rel='icon' href=titleIcon)
+  link(rel='stylesheet' href='contact.css')
+  link(rel='stylesheet' href='contact-responsive.css')
+  link(rel='stylesheet' href='styles.css')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous')
+.container-fluid.background-opacity
+  .container-fluid
+    .row
+      .col
+        a(href='#')
+          img(src='books-svg/linkedin.svg' alt='')
+        a(href='#')
+          img(src='books-svg/twitter.svg' alt='')
+        a(href='#')
+          img(src='books-svg/amazon.svg' alt='')
+      .col.text-end.me-3.head
+        a.calendar-icon-head.pe-3.text-decoration-none.text-white(href='#')
+          img(src='books-svg/calendar.svg' alt='')
+          |  Book For a Speaking Event
+        a.mail-icon-head.text-decoration-none.text-white(href='#')
+          img(src='books-svg/mail.svg' alt='')
+          |  Email Kishan
+    hr(style='color: white;')
+  .container-fluid
+    .row
+      .col
+        img.logo.w-50(src=logo alt='')
+        img#list-icon(onclick='showMenu()' src='svg/list.svg' alt='')
+      .list-icon-menu
+        ul
+          li.menu-home
+            a(href='/') HOME
+          li
+            a(href='/books') BOOKS
+          li
+            a(href='/about') ABOUT
+          li
+            a(href='/contact') CONTACT
+          li
+            a(href='/articles') ARTICLES
+      .col.mt-4.menu
+        a.me-3.text-white.text-decoration-none(href='/') HOME
+        a.me-3.text-white.text-decoration-none(href='/books') BOOKS
+        a.me-3.text-white.text-decoration-none(href='/about') ABOUT
+        a.me-3.text-white.text-decoration-none(href='/contact') CONTACT
+        a.me-3.text-white.text-decoration-none(href='/articles') ARTICLES
+        button.btn.bg-primary.text-white FREE EXPERT
+  .container.text-center.mt-5.pt-5.text-white.pb-5
+    h1.front-text #{frontTitle}
+    .front-text-1
+      a.text-decoration-none.text-white(href='#') Home 
+      strong(style='color: rgb(210, 183, 26); font-size: 1.5rem;')  &gt; 
+      a.text-decoration-none.text-white(href='#')  Contact
+.container-fluid.bg-light.pt-5
+  .row.section-1
+    .col.sec-1-col
+      #form.container.bg-warning.text-center.pb-5.rounded.pt-5
+        h3.text-light  #{section1FormHeading}
+        br
+        br
+        .input-group
+          .form-floating.mb-3.me-2
+            input.form-control.me-2.rounded(type='text' aria-label='First name' placeholder='First Name')
+            label(for='floatingTextarea') First Name
+          .form-floating
+            input.form-control.rounded(type='text' aria-label='Last name' placeholder='Last Name')
+            label(for='floatingTextarea') Lastname
+        //
+          <div class="input-group">
+          <input type="email" aria-label="Email" class="form-control me-2 rounded" placeholder="Email Address">
+          <input type="text" aria-label="Subject" class="form-control rounded" placeholder="Subject">
+          </div>
+        .input-group
+          .form-floating.me-2
+            input#floatingTextarea.form-control.me-2.rounded(type='email' aria-label='Email' placeholder='Email Address')
+            label(for='floatingTextarea') Email address
+          .form-floating
+            input.form-control.rounded(type='text' aria-label='Subject' placeholder='Subject')
+            label(for='floatingTextarea') Subject
+        .form-floating.mb-3
+          textarea#floatingTextarea.form-control.mt-3.mb-3(placeholder='Leave a comment here')
+          label(for='floatingTextarea') Message
+        button.btn.bg-primary.text-white.w-75(type='submit') Submit
+    .col.ms-4
+      h5 #{section1Title1}
+      h2 #{section1SubTitle1}
+      br
+      a.bg-primary.text-white.p-3.text-decoration-none.rounded(href='#') #{section1Button1}
+      br
+      br
+      hr.sec-1-hr(style='color: brown; border-top: 5px solid black;')
+      br
+      strong
+        p.fs-5 #{section1Title2}
+      strong
+        h3.fs-1 #{section1SubTitle2}
+      p.fs-3.bg-primary.w-50.text-center.text-light.rounded #{section1Button2}
+      br
+      br
+    .col.text-center
+      img.w-75.ms-5.chunka-img(src=AuthorImage alt='')
+      h5.mt-2.fs-4 Kishan Pranay
+      div
+        a(href='#')
+          img.bg-primary.p-3.rounded-circle(src='books-svg/linkedin.svg' alt='')
+        a(href='#')
+          img.bg-primary.p-3.rounded-circle(src='books-svg/twitter.svg' alt='')
+        a(href='#')
+          img.bg-primary.p-3.rounded-circle(src='books-svg/amazon.svg' alt='')
+.container-fluid.footer-bg
+    .row
+        .col.mt-5.ms-4
+            img.footer-img(src=logo alt='')
+            br
+            p.text-white.ms-4.mt-4 #{AuthorTitle}
+            br
+            div
+                img.ms-4(src='books-svg/linkedin.svg' alt='')
+                img.ms-3(src='books-svg/twitter.svg' alt='')
+                img.ms-3(src='books-svg/amazon.svg' alt='')
+        .col.mt-5.ms-4
+            h3.text-warning Quick Links
+            div
+                a.text-decoration-none.text-white(href='/') HOME
+                br
+                br
+                a.text-decoration-none.text-white(href='/books') BOOK
+                br
+                br
+                a.text-decoration-none.text-white(href='/about') ABOUT
+                br
+                br
+                a.text-decoration-none.text-white(href='/contact') CONTACT
+                br
+                br
+                a.text-decoration-none.text-white(href='/articles') ARTICLES
+        .col.mt-5.ms-4
+            h3.text-warning Contact
+            div
+                a.text-decoration-none.text-white(href='#') Sign Up
+                br
+                br
+                a.text-decoration-none.text-white(href='#')
+                    img(src='books-svg/mail.svg' alt='')
+                    |  Email #{AuthorName}
+                br
+                br
+                a.text-decoration-none.text-white(href='#')
+                    img(src='books-svg/calendar.svg' alt='')
+                    |  Book For a Speaking Event
+    hr(style='color: white;')
+    p.text-white.pb-4 #{AuthorName} Copyright &copy; 2024
+script(src='script.js')

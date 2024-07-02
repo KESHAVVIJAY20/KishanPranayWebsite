@@ -1,0 +1,43 @@
+@media only screen and (max-width:430px) and (max-height:932px) {
+    .calendar-icon-head{
+        font-size: smaller;
+        margin-top: 2%;
+    }
+    .list-icon-menu{
+        position: relative;
+        left: 60%;
+        
+    }
+    .menu{
+        display: none;
+    }
+    .head{
+        display: flex;
+        min-width: 75%;
+        margin-right: 2px;
+        font-size: .9rem;
+    }
+    .front-text{
+        font-size: 20vw;
+    }
+    .footer-logo{
+        max-width: 65vw;
+    }
+    #list-icon{
+        display: block;
+        position: relative;
+        left: 80%;
+        top: -40%;
+        height: 6vh;
+        margin-top: -2%;
+    }
+    /* .logo{
+        width: 100%;
+        min-width: 80%;
+    } */
+    .sec-1-row{
+        .col{
+            min-width: 70%;
+        }
+    }
+}

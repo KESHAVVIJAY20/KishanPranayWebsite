@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: url(images/KP.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.list-icon-menu{
+    filter: drop-shadow(2px 7px 20px rgb(123, 165, 186));
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+15&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One&display=swap');
+.background-image {
+    background-image: url('https://chunkamui.com/wp-content/uploads/2024/02/about3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+.background-opacity{
+    background-color: rgba(43, 62, 202, 0.333);
+}
+.list-icon-menu{
+    display: none;
+    ul{
+        list-style-type: none;
+        background-color: aliceblue;
+        width: 30vw;
+        text-align: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        :hover{
+            background-color: rgb(208, 255, 127);
+            
+        }
+        li{
+            width: 133%;
+            margin-left: -33%;
+            
+        }
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+#list-icon{
+    display: none;
+}
+.front-text{
+    font-size: 12vh;
+    font-family: Poetsen One;
+}
+.font-family{
+    font-family: sans-serif;
+}
+
+.custom-border-bottom{
+    border-bottom: 2px solid black;
+    width: 20vw;
+}
+.book-img{
+    width: auto;
+    height: 60vh;
+}
+.bg-sec-2{
+    background-color: rgb(204, 227, 244);
+    color: rgb(32, 98, 127);
+}
+.bg-img-sec-3{
+    background: url(images/KP-Home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sec-3-content{
+    margin-left: -20%;
+    margin-right: 10%;
+}
+/* .border-left-sec-3{
+    border-left: 6px solid yellow;
+} */
+.text-yellow{
+    color: rgb(255, 202, 9);
+}
+.footer-bg{
+    background-color: rgb(27, 27, 118); 
+}

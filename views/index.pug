@@ -1,0 +1,346 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title=title 
+    link(rel='icon' href=titleIcon)
+    link(rel='stylesheet' href='styles.css')
+    link(rel='stylesheet' href='home.css')    
+    link(rel='stylesheet' href='responsive.css')
+    link(rel='stylesheet' href='main.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+.container-fluid.background-opacity.home
+    .container-fluid
+        .row
+            .col
+                a(href='#')
+                    img(src='books-svg/linkedin.svg' alt='')
+                a(href='#')
+                    img(src='books-svg/twitter.svg' alt='')
+                a(href='#')
+                    img(src='books-svg/amazon.svg' alt='')
+            .col.text-end.me-3.head
+                a.calendar-icon-head.pe-3.text-decoration-none.text-white(href='#')
+                    img(src='books-svg/calendar.svg' alt='')
+                    |  Book For a Speaking Event
+                a.mail-icon-head.text-decoration-none.text-white(href='#')
+                    img(src='books-svg/mail.svg' alt='')
+                    |  Email #{AuthorName}
+        hr(style='color: white;')
+    .container-fluid
+        .row
+            .col
+                img.logo.w-50(src=logo  alt='')
+                img#list-icon(onclick='showMenu()' src='svg/list.svg' alt='')
+            .list-icon-menu
+                ul
+                    li.menu-home
+                        a(href='/') HOME
+                    li
+                        a(href='/books') BOOKS
+                    li
+                        a(href='/about') ABOUT
+                    li
+                        a(href='/contact') CONTACT
+                    li
+                        a(href='/articles') ARTICLES
+            .col.mt-4.menu
+                a.me-3.text-white.text-decoration-none(href='/') HOME
+                a.me-3.text-white.text-decoration-none(href='/books') BOOKS
+                a.me-3.text-white.text-decoration-none(href='/about') ABOUT
+                a.me-3.text-white.text-decoration-none(href='/contact') CONTACT
+                a.me-3.text-white.text-decoration-none(href='/articles') ARTICLES
+                button.btn.bg-primary.text-white FREE EXPERT
+    // <main>
+    section.section-1
+        .book-img
+            img.book-1(src=frontBook alt='BHFB_3D_HC-3-2 BOOK')
+        .book-1-about
+            h4(style='\
+      -webkit-text-stroke: 2px rgb(255, 255, 255);\
+      color: rgb(255, 255, 255);\
+      ')
+                | LATEST RELEASE
+                br
+                |               BY KISHAN PRANAY
+            br
+            .sec-1-text
+                span(style="\
+        -webkit-text-stroke: 2px rgb(255, 247, 0);\
+        color: rgb(255, 255, 0);\
+        font-size: 4rem;\
+        font-family: 'Dancing Script', cursive;\
+        width: 700px;\
+        ") #{frontTextTitle}
+            b
+                p(style='color: white; font-family: sans serif; font-size: 1.5rem')
+                    | #{frontTextTitleAbout}
+            button#learn-more.btn.bg-primary.text-white #{frontPageBottomButton}
+    section.section-2.bg-white.pt-5
+        .section-2-div-1(style='display: flex')
+            .sec-2.ms-4(style='max-width: 60%')
+                b
+                    span(style='\
+          color: rgb(208, 37, 191);\
+          font-family: Poetsen One;\
+          font-size: 2rem;\
+          ') #{AuthorName}
+                br
+                span(style='font-size: 4rem; font-family: Poetsen One')
+                    | #{AuthorTitle}
+                    span(style='\
+          border-bottom: 7px solid rgb(208, 37, 191);\
+          padding-bottom: 2%;\
+          ')
+                p.sec-2-para(style="\
+        max-width: 80%;\
+        margin-top: 5%;\
+        font-family: 'Times New Roman';\
+        ")
+                    | #{AuthorTitleDesc}
+                span(style='font-size: 4rem; font-family: Poetsen One') #{AuthorFeaturedOn}
+                br
+                br
+                .container.featuredOnImg
+                    a(href='#')
+                        img(src=AuthorFeaturedOnImg1 alt='')
+                    a(href='#')
+                        img(src=AuthorFeaturedOnImg2 alt='')
+                    a(href='#')
+                        img(src=AuthorFeaturedOnImg3  alt='')
+                    a(href='#')
+                        img(src=AuthorFeaturedOnImg4 alt='')
+                    a(href='#')
+                        img(src=AuthorFeaturedOnImg5 alt='')
+            .sec-2-col-2(style='\
+      background-color: rgb(255, 255, 255);\
+      width: 35%;\
+      text-align: center;\
+      margin-top: -10%;\
+      ')
+                b
+                    span(style='padding-top: 10%') #{section1FormHeading1}
+                br
+                h1 #{section1FormHeading2}
+                br
+                a(href='#')
+                    img.tab-img(style='width: auto; height: 50vh' src=section1FormImage alt='')
+                br
+                br
+                form.read-sign-up(action='#')
+                    //
+                      <input type="text" class="form-control" name="name" placeholder="Name" required> <br>
+                      <input type="mail" class="form-control" name="mail" placeholder="Email Address" required><br>
+                    .form-floating.mb-2
+                        input.form-control.me-2.rounded(type='text' aria-label='Full Name' placeholder='Full Name')
+                        label(for='floatingTextarea') Full Name
+                    .form-floating
+                        input.form-control.rounded(type='email' aria-label='Email' placeholder='Email Address')
+                        label(for='floatingTextarea') Email Address
+                    br
+                    input#submit.btn.bg-primary.text-white.ps-5.pe-5(type='submit' name='Submit')
+section.section-3
+    .container-fluid.text-center.mb-5
+        b
+            h5.container.pt-4(style='font-family: mono;color: rgb(156, 53, 53); -webkit-text-stroke: 2px rgb(150, 79, 149);') #{section2heading}
+        br
+        h1.container.text-center.pb-4(style='border-bottom: 4px solid rgb(147, 109, 154); width: 150px;color: rgb(132, 255, 0);') #{section2heading1}
+    #sec-3-mini-book.container-fluid(style='display: flex ;')
+        .container
+            img.mini-book(style='width: 13vw; height: 30vh;' src=section2Book1 alt='')
+            p
+                | #{section2Book1AboutTitle}
+            strong
+                a(style='text-decoration: none;' href='#') LEARN MORE
+        .container
+            img.mini-book(style='width: 13vw; height: 30vh;' src=section2Book2 alt='')
+            p
+                | #{section2Book2AboutTitle} 
+            strong
+                a(style='text-decoration: none;' href='#') LEARN MORE
+        .container
+            img.mini-book(style='width: 13vw; height: 30vh;' src=section2Book3 alt='')
+            p
+                | #{section2Book3AboutTitle}
+            strong
+                a(style='text-decoration: none;' href='#') LEARN MORE
+        .container
+            img.mini-book(style='width: 13vw; height: 30vh;' src=section2Book4 alt='')
+            p
+                | #{section2Book4AboutTitle}
+            strong
+                a(style='text-decoration: none;' href='#') LEARN MORE
+    .container-fluid.text-center.mt-5.pb-4
+        button.btn.bg-success.text-white VIEW ALL BOOKS
+section.section-8.bg-light
+    .container-fluid.pt-5(style='display: flex;')
+        .container.text-center
+            img(style='width: 10vw; height: 20vh;' src=section3Image alt='')
+            br
+            br
+            strong #{section3ImageTitle}
+            p #{section3ImageAbout}
+            strong LEARN MORE
+        .container.text-center
+            img(style='width: 10vw; height: 20vh;' src=section3Image1  alt='')
+            br
+            br
+            strong #{section3Image1Title}
+            p #{section3Image1About}
+            strong LEARN MORE
+        .container.text-center
+            img(style='width: 10vw; height: 20vh;' src=section3Image2  alt='')
+            br
+            br
+            strong #{section3Image2Title}
+            p #{section3Image2About}
+            strong LEARN MORE
+section.section-4
+    .row
+        .col.container
+            b
+                h3
+                    | #{section4AuthorAboutTitle}
+            b
+                h1.sec-4-h1 #{AuthorName}
+            hr(style='color: rgb(115, 255, 0); width: 150px; height: 20px;border-top: 5px solid rgb(206, 255, 12); ')
+            p
+                | #{section4AuthorAbout}
+            br
+            br
+            button.btn.bg-light.ps-5.pe-5.pt-3.pb-3  VIEW ALL BOOKS
+        .col.container
+            img#sec-4-img-1(style='width: 50vw; height: 70vh;' src=section4AuthorImage alt='')
+            img#sec-4-img-2(style='width: 20vw; height: 50vh; position: relative;float: right; margin-top: -50%;border: 10px solid yellow;' src=section4AuthorImage1  alt='')
+section.section-5
+    .container-fluid.text-center
+        strong
+            p(style='font-size: 5vh; padding-top: 4%; color: rgb(150, 40, 150);') #{section5Title}
+        strong(style='font-size: 10vh; color: rgb(23, 163, 98);') #{section5Title1}
+        hr(style=' height: 20px;margin-left: 37vw ;border-top:5px solid black; width: 300px;color: rgb(255, 22, 22);')
+        br
+        br
+        strong
+            p(style='font-size: 5vh;color: rgb(139, 29, 139);') #{section5SubTitle}
+        i
+            p(style='font-size: 4vh; padding-left: 5%;padding-right: 5%; ')
+                | #{section5SubTitleDesc}
+    b
+        p(style=' font-size: 2.7vh;padding-left: 10%;padding-right: 10%;color: rgb(148, 32, 148); ')
+            | #{section5SubTitleDescBy}
+
+
+section.section-6.container-fluid.text-center.pt-5
+    strong
+        p(style='font-size: 5vh; color: rgb(169, 35, 169);') #{section6Title}
+    strong
+        h1(style='font-size: 10vh; color: rgb(50, 136, 66);') #{section6Title1}
+    hr(style='border-top: 5px solid black; height: 10vh;width: 22vw;margin-left: 38vw;')
+    .container-fluid.row
+        .container.col.bg-white.me-2.ms-3.pt-4
+            img(style='width: 20vw;\
+      height: 40vh;' src=section6Card1Img alt='')
+            h4(style="font-family: 'Times New Roman', Times, serif;")
+                | #{section6Card1ImgTitle}
+            p
+                | #{section6Card1ImgAbout}
+            br
+            button.btn.bg-primary.text-white READ MORE &gt;
+        .container.col.bg-white.me-2.ms-3.pt-4
+            img(style='width: 20vw;\
+      height: 40vh;' src=section6Card2Img1 alt='')
+            h4(style="font-family: 'Times New Roman', Times, serif;")
+                | #{section6Card2Img1Title}
+            p
+                | #{section6Card2Img1About}
+            br
+            button.btn.bg-primary.text-white READ MORE &gt;
+        .container.col.bg-white.me-2.ms-3.pt-4
+            img(style='width: 20vw;\
+      height: 40vh;' src=section6Card3Img2 alt='')
+            h4(style="font-family: 'Times New Roman', Times, serif;")
+                | #{section6Card3Img2Title}
+            p
+                | #{section6Card3Img2About}
+            br
+            button.btn.bg-primary.text-white.mb-3 READ MORE &gt;
+        |       x
+        a(href='#' style='text-align: start;margin-top: 5%; text-decoration: none; color: rgb(153, 37, 153);')
+            h2 VIEW ALL ARTICLES &gt;&gt;
+        hr(style='width: 28vw; border-top: 5px solid rgb(2, 6, 11);')
+section.section-7.container-fluid.text-center.pt-5
+    strong
+        p(style='font-size: 5vh;color: rgb(255, 234, 0);') #{AuthorName}
+    strong
+        h1.sec-7-h1(style='font-size: 7vh; color: white;') #{section7Heading}
+    p(style='width: 35vw;margin-top: 2%; margin-left: 33vw; border-top: 5px solid rgb(255, 187, 0);')
+        .row
+            .col
+                img(style='width: 10vw;' src=section7Img alt='')
+                h1(style='color: rgb(214, 187, 13);') #{section7ImgTitle}
+                br
+                p(style='color: white;') LEARN MORE
+                p.border(style='border-top: 2px solid rgb(211, 185, 15); width: 100px;margin-left: 38%;')
+            .col
+                img(style='width: 10vw;' src=section7Img1 alt='')
+                h1(style='color: rgb(214, 187, 13);') #{section7Img1Title}
+                br
+                p(style='color: white;') LEARN MORE
+                p.border(style='border-top: 2px solid rgb(211, 185, 15); width: 100px;margin-left: 38%;')
+            .col
+                img(style='width: 10vw;' src=section7Img2 alt='')
+                h1(style='color: rgb(214, 187, 13);') #{section7Img2Title}
+                br
+                p(style='color: white;') LEARN MORE
+                p.border(style='border-top: 2px solid rgb(211, 185, 15); width: 100px;margin-left: 38%;')
+        a(href='#' style=' text-decoration: none;color: white;')
+            h4.sec-7-h4.pt-3.pb-3(style='background-color: rgb(214, 187, 13);margin-top: 3%;width: 20%; margin-left: 40%; border-radius: 5px; margin-bottom: 5%;') #{section7Button}
+
+
+.container-fluid.footer-bg
+    .row
+        .col.mt-5.ms-4
+            img.footer-img(src=logo alt='')
+            br
+            p.text-white.ms-4.mt-4 #{AuthorTitle}
+            br
+            div
+                img.ms-4(src='books-svg/linkedin.svg' alt='')
+                img.ms-3(src='books-svg/twitter.svg' alt='')
+                img.ms-3(src='books-svg/amazon.svg' alt='')
+        .col.mt-5.ms-4
+            h3.text-warning Quick Links
+            div
+                a.text-decoration-none.text-white(href='/') HOME
+                br
+                br
+                a.text-decoration-none.text-white(href='/books') BOOK
+                br
+                br
+                a.text-decoration-none.text-white(href='/about') ABOUT
+                br
+                br
+                a.text-decoration-none.text-white(href='/contact') CONTACT
+                br
+                br
+                a.text-decoration-none.text-white(href='/articles') ARTICLES
+        .col.mt-5.ms-4
+            h3.text-warning Contact
+            div
+                a.text-decoration-none.text-white(href='#') Sign Up
+                br
+                br
+                a.text-decoration-none.text-white(href='#')
+                    img(src='books-svg/mail.svg' alt='')
+                    |  Email #{AuthorName}
+                br
+                br
+                a.text-decoration-none.text-white(href='#')
+                    img(src='books-svg/calendar.svg' alt='')
+                    |  Book For a Speaking Event
+    hr(style='color: white;')
+    p.text-white.pb-4 #{AuthorName} Copyright &copy; 2024
+script(src='script.js')
