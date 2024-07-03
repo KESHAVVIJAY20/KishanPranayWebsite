@@ -31,19 +31,23 @@ head
     .row
       .col
         img.logo.w-50(src=logo  alt='')
-        img#list-icon(onclick='showMenu()' src='svg/list.svg' alt='')
-      .list-icon-menu
-        ul
-          li.menu-home
-            a(href='/') HOME
-          li
-            a(href='/books') BOOKS
-          li
-            a(href='/about') ABOUT
-          li
-            a(href='/contact') CONTACT
-          li
-            a(href='/articles') ARTICLES
+        #demo.offcanvas.offcanvas-end.w-50.h-50.mt-5.rounded
+            .offcanvas-header
+                button.btn-close(type='button' data-bs-dismiss='offcanvas')
+            .offcanvas-body
+                ul.list-group.text-center.border-none
+                    li.list-group-item
+                        a.text-decoration-none(href='/') HOME
+                    li.list-group-item
+                        a.text-decoration-none(href='/books') BOOKS
+                    li.list-group-item
+                        a.text-decoration-none(href='/about') ABOUT
+                    li.list-group-item
+                        a.text-decoration-none(href='/contact') CONTACT
+                    li.list-group-item
+                        a.text-decoration-none(href='/articles') ARTICLES
+        .container-fluid.mt-3
+        img#list-icon( src='svg/list.svg' alt='' data-bs-toggle='offcanvas' data-bs-target='#demo')
       .col.mt-4.menu
         a.me-3.text-white.text-decoration-none(href='/') HOME
         a.me-3.text-white.text-decoration-none(href='/books') BOOKS
@@ -155,4 +159,3 @@ head
                     |  Book For a Speaking Event
     hr(style='color: white;')
     p.text-white.pb-4 #{AuthorName} Copyright &copy; 2024
-script(src='script.js')

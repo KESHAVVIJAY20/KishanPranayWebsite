@@ -2,9 +2,6 @@
     .background-image{
         background-size: cover;
     }
-    .background-opacity{
-        
-    }
     .calendar-icon-head{
         font-size: .7rem;
         margin-top: 2%;
@@ -14,6 +11,15 @@
         position: relative;
         left: 60%;
         
+    }
+    .books{
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        /* overflow-x: hidden; */
+        .book-img{
+            width: 100%;
+        }
     }
     .menu{
         display: none;
@@ -32,7 +38,7 @@
         height: 6vh;
         margin-top: -2%;
     }
-    .footer-logo{
+    .footer-img{
         max-width: 65vw;
     }
 }

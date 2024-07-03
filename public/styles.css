@@ -11,6 +11,6 @@ body{
 body::-webkit-scrollbar {
     display: none;
 }
-.list-icon-menu{
+/* .list-icon-menu{
     filter: drop-shadow(2px 7px 20px rgb(123, 165, 186));
-}
+} */

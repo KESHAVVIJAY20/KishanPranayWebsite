@@ -28,25 +28,29 @@ head
                     |  Book For a Speaking Event
                 a.mail-icon-head.text-decoration-none.text-white(href='#')
                     img(src='books-svg/mail.svg' alt='')
-                    |  Email #{AuthorName}
+                    | Email Kishan
         hr(style='color: white;')
-    .container-fluid
+    .container-fluid.overflow-hidden
         .row
             .col
                 img.logo.w-50(src=logo  alt='')
-                img#list-icon(onclick='showMenu()' src='svg/list.svg' alt='')
-            .list-icon-menu
-                ul
-                    li.menu-home
-                        a(href='/') HOME
-                    li
-                        a(href='/books') BOOKS
-                    li
-                        a(href='/about') ABOUT
-                    li
-                        a(href='/contact') CONTACT
-                    li
-                        a(href='/articles') ARTICLES
+                #demo.offcanvas.offcanvas-end.w-50.h-50.mt-5.rounded
+                    .offcanvas-header
+                        button.btn-close(type='button' data-bs-dismiss='offcanvas')
+                    .offcanvas-body
+                        ul.list-group.text-center.border-none
+                            li.list-group-item
+                                a.text-decoration-none(href='/') HOME
+                            li.list-group-item
+                                a.text-decoration-none(href='/books') BOOKS
+                            li.list-group-item
+                                a.text-decoration-none(href='/about') ABOUT
+                            li.list-group-item
+                                a.text-decoration-none(href='/contact') CONTACT
+                            li.list-group-item
+                                a.text-decoration-none(href='/articles') ARTICLES
+                .container-fluid.mt-3
+                img#list-icon( src='svg/list.svg' alt='' data-bs-toggle='offcanvas' data-bs-target='#demo')
             .col.mt-4.menu
                 a.me-3.text-white.text-decoration-none(href='/') HOME
                 a.me-3.text-white.text-decoration-none(href='/books') BOOKS
@@ -57,7 +61,8 @@ head
     // <main>
     section.section-1
         .book-img
-            img.book-1(src=frontBook alt='BHFB_3D_HC-3-2 BOOK')
+            a(href="https://www.amazon.com/dp/B09C1CWSRR/" target='_blank')
+                img.book-1(src=frontBook alt='BHFB_3D_HC-3-2 BOOK')
         .book-1-about
             h4(style='\
       -webkit-text-stroke: 2px rgb(255, 255, 255);\
@@ -78,7 +83,8 @@ head
             b
                 p(style='color: white; font-family: sans serif; font-size: 1.5rem')
                     | #{frontTextTitleAbout}
-            button#learn-more.btn.bg-primary.text-white #{frontPageBottomButton}
+            a(href="https://www.amazon.com/dp/B09C1CWSRR/" target='_blank') 
+                button#learn-more.btn.bg-primary.text-white #{frontPageBottomButton}
     section.section-2.bg-white.pt-5
         .section-2-div-1(style='display: flex')
             .sec-2.ms-4(style='max-width: 60%')
@@ -343,4 +349,3 @@ section.section-7.container-fluid.text-center.pt-5
                     |  Book For a Speaking Event
     hr(style='color: white;')
     p.text-white.pb-4 #{AuthorName} Copyright &copy; 2024
-script(src='script.js')

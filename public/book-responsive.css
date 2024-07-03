@@ -42,7 +42,10 @@
         height: 30vh;
         margin-left: -18%;
     }
-    .footer-logo{
+    /* .footer-logo{
+        max-width: 60vw;
+    } */
+    .footer-img{
         max-width: 65vw;
     }
 }

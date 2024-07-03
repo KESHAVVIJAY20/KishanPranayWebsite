@@ -12,7 +12,7 @@ head
 .container-fluid.background-opacity
   .container-fluid
     .row
-      .col
+      .col.headerIcons
         a(href='#')
           img(src='books-svg/linkedin.svg' alt='')
         a(href='#')
@@ -31,19 +31,23 @@ head
     .row
       .col
         img.logo.w-50(src='https://chunkamui.com/wp-content/uploads/2021/07/CM-logo-1.png' alt='')
-        img#list-icon(onclick='showMenu()' src='svg/list.svg' alt='')
-      .list-icon-menu
-        ul
-          li.menu-home
-            a(href='/') HOME
-          li
-            a(href='/books') BOOKS
-          li
-            a(href='/about') ABOUT
-          li
-            a(href='/contact') CONTACT
-          li
-            a(href='/articles') ARTICLES
+        #demo.offcanvas.offcanvas-end.w-50.h-50.mt-5.rounded
+          .offcanvas-header
+              button.btn-close(type='button' data-bs-dismiss='offcanvas')
+          .offcanvas-body
+              ul.list-group.text-center.border-none
+                  li.list-group-item
+                      a.text-decoration-none(href='/') HOME
+                  li.list-group-item
+                      a.text-decoration-none(href='/books') BOOKS
+                  li.list-group-item
+                      a.text-decoration-none(href='/about') ABOUT
+                  li.list-group-item
+                      a.text-decoration-none(href='/contact') CONTACT
+                  li.list-group-item
+                      a.text-decoration-none(href='/articles') ARTICLES
+                      .container-fluid.mt-3
+        img#list-icon( src='svg/list.svg' alt='' data-bs-toggle='offcanvas' data-bs-target='#demo')
       .col.mt-4.menu
         a.me-3.text-white.text-decoration-none(href='./') HOME
         a.me-3.text-white.text-decoration-none(href='/books') BOOKS
@@ -66,43 +70,53 @@ head
   .container-fluid.p-5
     .row.pb-5.books
       .col.p-2
-        img.book-img(src=section1Book1 alt='')
+        a(href="#")
+          img.book-img(src=section1Book1 alt='')
         p
           | #{section1Book1Title}
       .col.p-2
-        img.book-img(src=section1Book2 alt='')
+        a(href="#")
+          img.book-img(src=section1Book2 alt='')
         p
           | #{section1Book2Title}
       .col.p-2
-        img.book-img(src=section1Book3 alt='')
+        a(href="#")
+          img.book-img(src=section1Book3 alt='')
         p
           | #{section1Book3Title}
       .col.p-2
-        img.book-img(src=section1Book4 alt='')
+        a(href="#")
+          img.book-img(src=section1Book4 alt='')
         p
           | #{section1Book4Title}
       .col.p-2
-        img.book-img(src=section1Book5 alt='')
+        a(href="#")
+          img.book-img(src=section1Book5 alt='')
         p
           | #{section1Book5Title}
       .col.p-2
-        img.book-img(src=section1Book6 alt='')
+        a(href="#")
+          img.book-img(src=section1Book6 alt='')
         p.text-left
           | #{section1Book6Title}
       .col.p-2
-        img.book-img(src=section1Book7 alt='')
+        a(href="#")
+          img.book-img(src=section1Book7 alt='')
         p
           | #{section1Book7Title}
       .col.p-2
-        img.book-img(src=section1Book8 alt='')
+        a(href="#")
+          img.book-img(src=section1Book8 alt='')
         p
           | #{section1Book8Title}
       .col.p-2
-        img.book-img(src=section1Book8 alt='')
+        a(href="#")
+          img.book-img(src=section1Book8 alt='')
         p
           | #{section1Book8Title}
       .col.p-2
-        img.book-img(src=section1Book8 alt='')
+        a(href="#")
+          img.book-img(src=section1Book8 alt='')
         p
           | #{section1Book8Title}
 // section-2 begins
@@ -185,4 +199,3 @@ head
                     |  Book For a Speaking Event
     hr(style='color: white;')
     p.text-white.pb-4 #{AuthorName} Copyright &copy; 2024
-script(src='script.js')
