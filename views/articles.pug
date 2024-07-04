@@ -9,6 +9,16 @@ head
   link(rel='stylesheet' href='styles.css')
   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous')
   script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous')
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css')
+  script(src='https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js')
+  script.
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init(
+        {
+          offset:200,
+        }
+      );
+    }); 
 .container-fluid.background-opacity
   .container-fluid
     .row
@@ -30,7 +40,7 @@ head
   .container-fluid
     .row
       .col
-        img.logo.w-50(src='https://chunkamui.com/wp-content/uploads/2021/07/CM-logo-1.png' alt='')
+        img(data-aos='zoom-in').logo.w-50(src='https://chunkamui.com/wp-content/uploads/2021/07/CM-logo-1.png' alt='')
         #demo.offcanvas.offcanvas-end.w-50.h-50.mt-5.rounded
             .offcanvas-header
                 button.btn-close(type='button' data-bs-dismiss='offcanvas')
@@ -56,36 +66,36 @@ head
         a.me-3.text-white.text-decoration-none(href='/articles') ARTICLES
         button.btn.bg-primary.text-white FREE EXPERT
   .container.text-center.mt-5.pt-5.text-white
-    h1.front-text #{frontTitle}
+    h1(data-aos='zoom-out').front-text #{frontTitle}
     .front-text-1
       a.text-decoration-none.text-white(href='#') Home 
       strong(style='color: rgb(210, 183, 26); font-size: 1.5rem;')  &gt; 
       a.text-decoration-none.text-white(href='#')  Articles
 .container-fluid.mt-5.pt-5.bg-light.pb-5
   strong
-    p.fs-5.text-warning #{AuthorName}
+    p(data-aos='zoom-in').fs-5.text-warning #{AuthorName}
   strong
-    h1.fs-1 #{section1Heading}
+    h1(data-aos='fade-up').fs-1 #{section1Heading}
   hr(style='width: 15vw; border-top: 5px solid black;')
   br
-  p.fs-5
+  p(data-aos='fade-left').fs-5
     | #{section1Content}
   .row.mb-5.pt-4.sec-1-row
-    .col.shadow-lg.mx-2.pb-5
+    .col.shadow-lg.mx-2.pb-5(data-aos='zoom-in')
       img.col-img.w-100(src=section1Card1Img alt='')
       p.fs-4
         | #{section1Card1Title}
       p.fs-6
         | #{section1Card1SubTitle}
       a.bg-primary.w-25.text-light.p-2.rounded.text-decoration-none(href='#') #{section1CardButton}
-    .col.shadow-lg.mx-2.pb-5
+    .col.shadow-lg.mx-2.pb-5(data-aos='zoom-in')
       img.col-img.w-100(src=section1Card2Img alt='')
       p.fs-4
         | #{section1Card2Title}
       p.fs-6
         | #{section1Card2SubTitle}
       a.bg-primary.w-25.text-light.p-2.rounded.text-decoration-none(href='#') #{section1CardButton}
-    .col.shadow-lg.mx-2.pb-5
+    .col.shadow-lg.mx-2.pb-5(data-aos='zoom-in')
       img.col-img.w-100(src=section1Card3Img alt='')
       p.fs-4
         | #{section1Card3Title}
@@ -93,40 +103,40 @@ head
         | #{section1Card3SubTitle}
       a.bg-primary.w-25.text-light.p-2.rounded.text-decoration-none(href='#') #{section1CardButton}
   .row.pb-5.sec-1-row
-    .col.shadow-lg.mx-2.pb-5
+    .col.shadow-lg.mx-2.pb-5(data-aos='zoom-in')
       img.col-img.w-100(src=section1Card4Img alt='')
       p.fs-4
         | #{section1Card4Title}
       p.fs-6
         | #{section1Card4SubTitle}
       a.bg-primary.w-25.text-light.p-2.rounded.text-decoration-none(href='#') #{section1CardButton}
-    .col.shadow-lg.mx-2.pb-5
+    .col.shadow-lg.mx-2.pb-5(data-aos='zoom-in')
       img.col-img.w-100(src=section1Card5Img alt='')
       p.fs-4
         | #{section1Card5Title}
       p.fs-6
         | #{section1Card5SubTitle}
       a.bg-primary.w-25.text-light.p-2.rounded.text-decoration-none(href='#') #{section1CardButton}
-    .col.shadow-lg.mx-2.pb-5
+    .col.shadow-lg.mx-2.pb-5(data-aos='zoom-in')
       img.col-img.w-100(src=section1Card6Img alt='')
       p.fs-4
         | #{section1Card6Title}
       p.fs-6
         | #{section1Card6SubTitle}
       a.bg-primary.w-25.text-light.p-2.rounded.text-decoration-none(href='#') #{section1CardButton}
-  h1.mb-0(style='border-bottom: 5px solid rgb(127, 131, 104);width: fit-content;') #{section1FooterText}
+  h1(data-aos='fade-left').mb-0(style='border-bottom: 5px solid rgb(127, 131, 104);width: fit-content;') #{section1FooterText}
 .container0-fluid.text-center.SignUp
-  h2.fs-3.text-light.pt-5 #{section2Heading}
+  h2(data-aos='zoom-in').fs-3.text-light.pt-5 #{section2Heading}
   .container.mt-5.pb-5
     form
-      .form-floating.mb-3
+      .form-floating.mb-3(data-aos='zoom-out')
         input#floatingName.form-control(type='text' placeholder='Name')
         label(for='floatingPassword') Name
-      .form-floating
+      .form-floating(data-aos='zoom-out')
         input#floatingEmail.form-control(type='email' placeholder='name@example.com')
         label(for='floatingInput') Email address
-      button.btn.bg-primary.text-light.w-75.mt-4(type='submit') SIGN UP
-.container-fluid.footer-bg
+      button(data-aos='fade-up').btn.bg-primary.text-light.w-75.mt-4(type='submit') SIGN UP
+.container-fluid.footer-bg(data-aos='fade-in')
     .row
         .col.mt-5.ms-4
             img.footer-img(src=logo alt='')

@@ -14,3 +14,66 @@ body::-webkit-scrollbar {
 /* .list-icon-menu{
     filter: drop-shadow(2px 7px 20px rgb(123, 165, 186));
 } */
+ /* .animate-in{
+    animation: animate-in .5s ease-in;
+ }
+
+ @keyframes animate-in {
+    0% {
+      transform: translateY(200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+ .animate-text{
+    animation: animate-text 0.5s ease-in;
+ }
+
+ @keyframes animate-text {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  } */
+  
+  /* .front-text{
+    animation: front-text .5s ease-in;
+ }
+ 
+ @keyframes front-text {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  } */
+  /* .logo{
+    animation: logo 1s ease-in;
+ }
+ 
+ @keyframes logo {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  } */
+  
+  
