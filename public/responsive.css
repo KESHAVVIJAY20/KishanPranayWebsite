@@ -1,5 +1,8 @@
 /* for mobile screen  */
 @media only screen and (max-width: 430px)and (max-height: 932px){
+    body{
+        overflow-wrap: hidden;
+    }
     .head-top{
         width: 100%;
         max-width: 430px;
@@ -120,13 +123,15 @@
         }
     }
     .section-4{
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
         .col{
+            max-width: 430px;
             img{
                 width: 100%;
             }
         }
         .row{
+            max-width: 430px;
             flex-direction: column;
             .col{
                 flex-direction: column;
@@ -198,4 +203,210 @@
         margin-bottom: -10%;
     }
 }
+
+
+/* for mobile screen  */
+@media only screen and (min-width: 431px)and (max-width: 853px){
+
+    /* .head-top{
+        width: 100%;
+        max-width: 430px;
+    }
+    .navbars{
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 430px;
+    } */
+    .logo{
+        margin-top: 10%;
+    }
+    .calendar-icon-head{
+        font-size: .7rem;
+        margin-left: -79%;
+        padding-left: 1%;
+    }
+    #list-icon{
+        display: block;
+        position: relative;
+        left: 80%;
+        top: -40%;
+        height: 6vh;
+        margin-top: -2%;
+    }
+    .list-icon-menu{
+        position: relative;
+        left: 60%;
+
+    }
+
+    .menu{
+        width: 100%;
+        max-width: 600px;
+        /* padding: 50%; */
+        /* padding-top: 10%; */
+        /* padding-bottom: 90%; */
+        display: none;
+        /* background: linear-gradient(to right,transparent, rgb(0, 0, 0), transparent); */
+    }
+    .menu-ul{
+        flex-direction: column;
+        /* display: none; */
+    }
+    .menu-ul button{
+        display: none;
+    }
+    .section-1{
+        flex-wrap: wrap;
+    }
+    .book-1{
+        min-width: 60vw;
+        max-height: 44vh;
+        filter: drop-shadow(9px 7px 20px rgb(123, 165, 186));
+    }
+    .book-img{
+        display: flex;
+        margin: auto;
+    }
+    #learn-more{
+        margin-bottom: 10%;
+    }
+    .unhide{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
+    .section-2-div-1{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sec-2{
+        margin-bottom: 20%;
+        max-width: 73%;
+    }
+    .sec-2-para{
+        min-width: 145%;
+    }
+    .sec-2-col-2{
+        min-width: 80vw;
+        flex-wrap: wrap;
+        margin: auto;
+        border-radius: 10px;
+    }
+    .tab-img{
+        max-width: 70%;
+    }
+    .mini-book{
+        max-width: 20vw;
+        max-height: 20vh;
+    }
+    .featuredOnImg{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 20px;
+    }
+    .section-3{
+        #sec-3-mini-book{
+            flex-direction: column;
+            img{
+                display: flex;
+                margin: auto;
+                margin-bottom: 3%;
+                min-width: 30vw;
+            }
+        }
+    }
+    .section-8{
+        img{
+            min-width: 40vw;
+        }
+        div{
+            flex-direction: column;
+            padding-bottom: 20%;
+        }
+    }
+    .section-4{
+        /* overflow-x: hidden; */
+        .col{
+            max-width: 430px;
+            img{
+                width: 100%;
+            }
+        }
+        .row{
+            max-width: 430px;
+            flex-direction: column;
+            .col{
+                flex-direction: column;
+            }
+        }
+        #sec-4-img-1{
+            min-width: 95vw;
+            max-height: 27vh;
+            padding-bottom: 10%;
+        }
+        #sec-4-img-2{
+            min-width: 40vw;
+            max-height: 20vh;
+        }
+        
+    }
+    .section-5{
+        hr{
+            display: none;
+        }
+    }
+    .section-6{
+        img{
+            min-width: 80vw;
+        }
+        .row{
+            flex-direction: column;
+        }
+        .col{
+            margin-bottom: 10%;
+        }
+        .btn{
+            margin-bottom: 5%;
+        }
+    }
+    .section-7{
+        .col{
+            .border{
+                display: none;
+            }
+        }
+    }
+    .sec-7-h4{
+        min-width: 28%;
+    }
+    
+    footer{
+        .col{
+            text-align: center;
+            img{
+                padding-top: 10%;
+                width: 100%;
+            }
+            .footer-icons{
+                margin-left: 42%;
+                padding-bottom: 10%;
+            }
+            ul{
+                li{
+                    text-align: center;
+                }
+                .contact-li-icon{
+                    max-width: 7vw;
+                }
+            } 
+        }
+    }
+    .footer-bg{
+        margin-bottom: -10%;
+    }
+}
+
 

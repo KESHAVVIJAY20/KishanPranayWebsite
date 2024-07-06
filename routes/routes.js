@@ -4,7 +4,8 @@ const bookspageController = require("../controllers/bookspageController");
 const aboutpageController = require("../controllers/aboutpageController");
 const contactpageController = require("../controllers/contactpageController");
 const articlespageController = require("../controllers/articlespageController");
-const adminpageController = require("../controllers/adminpageController");
+const bookdescController = require("../controllers/bookdescController");
+const { createUser, deleteUser, updateUser} = require('../controllers/userController');
 const router = express.Router();
 
 // Define a route for the home page
@@ -23,8 +24,8 @@ router.get('/contact', (req, res) => {
 router.get('/articles', (req, res) => {
     articlespageController.Articlespage(req, res);
 });
-router.get('/admin', (req, res) => {
-    adminpageController.Adminpage(req, res);
+router.get('/bookdesc', (req, res) => {
+    bookdescController.BookDescpage(req, res);
 });
 
 // Define a route for the about page
@@ -44,5 +45,11 @@ router.post("/updateContactPage",(req,res)=>{
 router.post("/updateArticlesPage",(req,res)=>{
   articlespageController.setArticlesPage(req,res);
 });
+router.post("/updateBookDescPage",(req,res)=>{
+  bookdescController.setBookDescPage(req,res);
+});
+router.delete('/admin/:id', deleteUser);
+router.post('/users', createUser);
+router.put('/users/:id', updateUser);
 
 module.exports = router;

@@ -22,6 +22,33 @@ head
             }
         );
         });
+    script.
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('userForm').addEventListener('submit', async (e) => {
+        //-   e.preventDefault();
+
+          const Username = document.getElementById('Username').value;
+          const Usermail = document.getElementById('Usermail').value;
+          try {
+            const response = await fetch('/api/users', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ Username, Usermail })
+            });
+
+            const result = await response.json();
+            alert(result.message);
+          } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the form');
+          }
+        });
+      });
+
+
+
 .container-fluid.background-opacity.home
     .container-fluid
         .row
@@ -43,7 +70,7 @@ head
     .container-fluid.overflow-hidden
         .row
             .col
-                img(data-aos='zoom-in').logo.w-50(src=logo  alt='')
+                img.logo.w-50(data-aos='zoom-in' src=logo  alt='')
                 #demo.offcanvas.offcanvas-end.w-50.h-50.mt-5.rounded
                     .offcanvas-header
                         button.btn-close(type='button' data-bs-dismiss='offcanvas')
@@ -72,7 +99,7 @@ head
     section.section-1
         .book-img
             a(href="https://www.amazon.com/dp/B09C1CWSRR/" target='_blank')
-                img(data-aos='slide-up').book-1.animate-in(src=frontBook alt='BHFB_3D_HC-3-2 BOOK')
+                img.book-1.animate-in(data-aos='slide-up' src=frontBook alt='BHFB_3D_HC-3-2 BOOK')
         .book-1-about(data-aos='slide-left').animate-text
             h4(style='\
       -webkit-text-stroke: 2px rgb(255, 255, 255);\
@@ -97,7 +124,7 @@ head
                 button#learn-more.btn.bg-primary.text-white #{frontPageBottomButton}
     section.section-2.bg-white.pt-5
         .section-2-div-1(style='display: flex')
-            .sec-2(data-aos='fade-up').ms-4.testing(style='max-width: 60%').animate-text
+            .sec-2.ms-4.testing(data-aos='fade-up' style='max-width: 60%').animate-text
                 b
                     span(style='\
           color: rgb(208, 37, 191);\
@@ -136,7 +163,7 @@ head
       width: 35%;\
       text-align: center;\
       margin-top: -10%;\
-      ')(data-aos='fade-up')
+      ' data-aos='fade-up' )
                 b
                     span(style='padding-top: 10%') #{section1FormHeading1}
                 br
@@ -146,31 +173,32 @@ head
                     img.tab-img(style='width: auto; height: 50vh' src=section1FormImage alt='')
                 br
                 br
-                form.read-sign-up(action='#')
+                form#userForm.read-sign-up
                     //
                       <input type="text" class="form-control" name="name" placeholder="Name" required> <br>
                       <input type="mail" class="form-control" name="mail" placeholder="Email Address" required><br>
                     .form-floating.mb-2
-                        input.form-control.me-2.rounded(type='text' aria-label='Full Name' placeholder='Full Name')
+                        input.form-control.me-2.rounded(type='text' id='Username' name='Username' aria-label='Full Name' placeholder='Full Name' required)
                         label(for='floatingTextarea') Full Name
                     .form-floating
-                        input.form-control.rounded(type='email' aria-label='Email' placeholder='Email Address')
+                        input.form-control.rounded(type='email' id='Usermail' name='Usermail' aria-label='Email' placeholder='Email Address' required  )
                         label(for='floatingTextarea') Email Address
                     br
                     input#submit.btn.bg-primary.text-white.ps-5.pe-5(type='submit' name='Submit')
 section.section-3
     .container-fluid.text-center.mb-5
         b
-            h5(data-aos='zoom-in').container.pt-4(style='font-family: mono;color: rgb(156, 53, 53); -webkit-text-stroke: 2px rgb(150, 79, 149);') #{section2heading}
+            h5.container.pt-4(data-aos='zoom-in' style='font-family: mono;color: rgb(156, 53, 53); -webkit-text-stroke: 2px rgb(150, 79, 149);') #{section2heading}
         br
         h1.container.text-center.pb-4(style='border-bottom: 4px solid rgb(147, 109, 154); width: 150px;color: rgb(132, 255, 0);') #{section2heading1}
-    #sec-3-mini-book.container-fluid(data-aos='fade-in')(style='display: flex ;')
+    #sec-3-mini-book.container-fluid(data-aos='fade-in' style='display: flex ;')
         .container
-            img.mini-book(style='width: 13vw; height: 30vh;' src=section2Book1 alt='')
-            p
-                | #{section2Book1AboutTitle}
-            strong
-                a(style='text-decoration: none;' href='#') LEARN MORE
+            a.text-decoration-none.text-dark(href="/bookdesc") 
+                img.mini-book(style='width: 13vw; height: 30vh;' src=section2Book1 alt='')
+                p
+                    | #{section2Book1AboutTitle}
+                strong
+                    a(style='text-decoration: none;' href='#') LEARN MORE
         .container
             img.mini-book(style='width: 13vw; height: 30vh;' src=section2Book2 alt='')
             p
@@ -194,21 +222,21 @@ section.section-3
 section.section-8.bg-light
     .container-fluid.pt-5(style='display: flex;')
         .container.text-center
-            img(data-aos='fade-in')(style='width: 10vw; height: 20vh;' src=section3Image alt='')
+            img(data-aos='fade-in' style='width: 10vw; height: 20vh;' src=section3Image alt='')
             br
             br
             strong #{section3ImageTitle}
             p #{section3ImageAbout}
             strong LEARN MORE
         .container.text-center
-            img(data-aos='fade-in')(style='width: 10vw; height: 20vh;' src=section3Image1  alt='')
+            img(data-aos='fade-in' style='width: 10vw; height: 20vh;' src=section3Image1  alt='')
             br
             br
             strong #{section3Image1Title}
             p #{section3Image1About}
             strong LEARN MORE
         .container.text-center
-            img(data-aos='fade-in')(style='width: 10vw; height: 20vh;' src=section3Image2  alt='')
+            img(data-aos='fade-in' style='width: 10vw; height: 20vh;' src=section3Image2  alt='')
             br
             br
             strong #{section3Image2Title}
@@ -230,20 +258,20 @@ section.section-4
             a(href="/books")    
                 button.btn.bg-light.ps-5.pe-5.pt-3.pb-3  VIEW ALL BOOKS
         .col.container
-            img(data-aos='fade-in-left')#sec-4-img-1(style='width: 50vw; height: 70vh;' src=section4AuthorImage alt='')
-            img(data-aos='fade-in-left')#sec-4-img-2(style='width: 20vw; height: 50vh; position: relative;float: right; margin-top: -50%;border: 10px solid yellow;' src=section4AuthorImage1  alt='')
+            img#sec-4-img-1(style='width: 50vw; height: 70vh;' data-aos='fade-in-left' src=section4AuthorImage alt='')
+            img#sec-4-img-2(data-aos='fade-in-left' style='width: 20vw; height: 50vh; position: relative;float: right; margin-top: -50%;border: 10px solid yellow;' src=section4AuthorImage1  alt='')
 section.section-5
     .container-fluid.text-center
         strong
-            p(data-aos='fade-up')(style='font-size: 5vh; padding-top: 4%; color: rgb(150, 40, 150);') #{section5Title}
-        strong(data-aos='fade-up')(style='font-size: 10vh; color: rgb(23, 163, 98);') #{section5Title1}
+            p(style='font-size: 5vh; padding-top: 4%; color: rgb(150, 40, 150);' data-aos='fade-up') #{section5Title}
+        strong(style='font-size: 10vh; color: rgb(23, 163, 98);' data-aos='fade-up') #{section5Title1}
         hr(style=' height: 20px;margin-left: 37vw ;border-top:5px solid black; width: 300px;color: rgb(255, 22, 22);')
         br
         br
         strong
-            p(data-aos='fade-in')(style='font-size: 5vh;color: rgb(139, 29, 139);') #{section5SubTitle}
+            p(style='font-size: 5vh;color: rgb(139, 29, 139);' data-aos='fade-in') #{section5SubTitle}
         i
-            p(data-aos='fade-in-left')(style='font-size: 4vh; padding-left: 5%;padding-right: 5%; ')
+            p(style='font-size: 4vh; padding-left: 5%;padding-right: 5%; ' data-aos='fade-in-left')
                 | #{section5SubTitleDesc}
     b
         p(style=' font-size: 2.7vh;padding-left: 10%;padding-right: 10%;color: rgb(148, 32, 148); ')
@@ -252,9 +280,9 @@ section.section-5
 
 section.section-6.container-fluid.text-center.pt-5
     strong
-        p(data-aos='fade-in')(style='font-size: 5vh; color: rgb(169, 35, 169);') #{section6Title}
+        p(style='font-size: 5vh; color: rgb(169, 35, 169);' data-aos='fade-in') #{section6Title}
     strong
-        h1(data-aos='fade-in')(style='font-size: 10vh; color: rgb(50, 136, 66);') #{section6Title1}
+        h1(style='font-size: 10vh; color: rgb(50, 136, 66);' data-aos='fade-in') #{section6Title1}
     hr(style='border-top: 5px solid black; height: 10vh;width: 22vw;margin-left: 38vw;')
     .container-fluid.row(data-aos='fade-up')
         .container.col.bg-white.me-2.ms-3.pt-4.pb-2
@@ -290,9 +318,9 @@ section.section-6.container-fluid.text-center.pt-5
         hr(style='width: 28vw; border-top: 5px solid rgb(2, 6, 11);')
 section.section-7.container-fluid.text-center.pt-5
     strong
-        p(data-aos='fade-up')(style='font-size: 5vh;color: rgb(255, 234, 0);') #{AuthorName}
+        p(style='font-size: 5vh;color: rgb(255, 234, 0);' data-aos='fade-up') #{AuthorName}
     strong
-        h1(data-aos='fade-in').sec-7-h1(style='font-size: 7vh; color: white;') #{section7Heading}
+        h1.sec-7-h1(style='font-size: 7vh; color: white;' data-aos='fade-in') #{section7Heading}
     p(style='width: 35vw;margin-top: 2%; margin-left: 33vw; border-top: 5px solid rgb(255, 187, 0);')
         .row(data-aos='fade-up')
             .col
@@ -314,7 +342,7 @@ section.section-7.container-fluid.text-center.pt-5
                 p(style='color: white;') LEARN MORE
                 p.border(style='border-top: 2px solid rgb(211, 185, 15); width: 100px;margin-left: 38%;')
         a(href='#' style=' text-decoration: none;color: white;')
-            h4(data-aos='fade-left').sec-7-h4.pt-3.pb-3(style='background-color: rgb(214, 187, 13);margin-top: 3%;width: 20%; margin-left: 40%; border-radius: 5px; margin-bottom: 5%;') #{section7Button}
+            h4.sec-7-h4.pt-3.pb-3(data-aos='fade-left' style='background-color: rgb(214, 187, 13);margin-top: 3%;width: 20%; margin-left: 40%; border-radius: 5px; margin-bottom: 5%;') #{section7Button}
 
 
 .container-fluid.footer-bg(data-aos='fade-in')
