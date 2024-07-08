@@ -50,6 +50,6 @@ router.post("/updateBookDescPage",(req,res)=>{
 });
 router.delete('/admin/:id', deleteUser);
 router.post('/users', createUser);
-router.put('/users/:id', updateUser);
+router.put('/admin/:id', updateUser);
 
 module.exports = router;

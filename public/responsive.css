@@ -329,6 +329,7 @@
     }
     .section-4{
         /* overflow-x: hidden; */
+        max-width: 430px;
         .col{
             max-width: 430px;
             img{

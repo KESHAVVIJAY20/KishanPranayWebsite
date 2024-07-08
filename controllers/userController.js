@@ -25,7 +25,6 @@ const getUsers = async (req, res) => {
   const deleteUser = async (req, res) => {
     try {
       const userId = req.params.id;
-      console.log(userId);
       const result = await User.findByIdAndDelete(userId);  
       if (!result) {
         return res.status(404).json({ message: 'User not found' });
@@ -43,14 +42,14 @@ const getUsers = async (req, res) => {
     try {
       const userId = req.params.id;
       const { Username, Usermail } = req.body;
-      console.log('Received data:', { Username, Usermail });
-      const result = await User.findByIdAndUpdate(userId, { Username, Usermail }, { new: true });
+      // console.log('Received data:', { Username, Usermail });
+      const user = await User.findByIdAndUpdate(userId, { Username, Usermail }, { new: true });
   
-      if (!result) {
+      if (!user) {
         return res.status(404).json({ message: 'User not found' });
       }
   
-      res.status(200).json({ message: 'User updated successfully', user: result });
+      res.status(200).json({ message: 'User updated successfully', user });
     } catch (error) {
       console.error('Error updating user:', error);
       res.status(500).json({ message: 'Error updating user', error });
