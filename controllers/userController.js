@@ -12,16 +12,6 @@ const createUser = async (req, res) => {
   }
 };
 
-const getUsers = async (req, res) => {
-    try {
-      const users = await User.find();
-      res.render('Admin', { users });
-    } catch (error) {
-      console.error('Error fetching users:', error); // Log error to console
-      res.status(500).json({ message: 'Error fetching users', error });
-    }
-  };
-
   const deleteUser = async (req, res) => {
     try {
       const userId = req.params.id;
@@ -58,5 +48,5 @@ const getUsers = async (req, res) => {
 
 
 module.exports = {
-  createUser,getUsers,deleteUser,updateUser
+  createUser,deleteUser,updateUser
 };

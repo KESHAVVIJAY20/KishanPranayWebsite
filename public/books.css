@@ -81,3 +81,9 @@
 .footer-bg{
     background-color: rgb(27, 27, 118); 
 }
+  .clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+  }

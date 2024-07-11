@@ -1,0 +1,21 @@
+@media only screen and (max-width: 430px) {
+    /* body {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    .content{
+        overflow-x: scroll;
+    }
+    .sidebar{
+        min-width: 100vw;
+    } */
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        overflow-x: scroll;
+        text-align: center;
+    }
+}

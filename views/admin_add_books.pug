@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Add Book
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+    link(rel="stylesheet", href="/admin_add_books.css")
+  body
+    .container.mt-5
+    .container.w-50
+      a.text-decoration-none.text-danger(href="/admin")   
+        h1.text-right X
+      h1.text-center.top Add New Book
+      form(action='/admin/add-book', method='POST')
+        .form-group
+          label(for='title') Title
+          input#title.form-control(type='text', name='title', required=true)
+        .form-group
+          label(for='author') Author
+          input#author.form-control(type='text', name='author', required=true)
+        .form-group
+          label(for='genre') Genre
+          input#genre.form-control(type='text', name='genre',required=true)
+        .form-group
+          label(for='description') Description
+          textarea#description.form-control(name='description', required=true)
+        .form-group
+          label(for='cover') Cover URL
+          input#cover.form-control(type='text', name='cover',required=true)
+        button.btn.btn-primary(type='submit') Add Book

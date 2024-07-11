@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Books
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  body
+    .container
+      h1 Books
+      .row
+        each book in books
+          .col-md-4
+            .card.mb-4
+              img.card-img-top(src=book.cover, alt=book.title)
+              .card-body
+                h5.card-title= book.title
+                p.card-text
+                  | Author: #{book.author}
+                  br
+                  | Genre: #{book.genre}
+                p.card-text= book.description
+                a.btn.btn-primary(href=`/books/${book._id}`) View Details

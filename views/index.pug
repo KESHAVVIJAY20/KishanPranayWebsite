@@ -48,7 +48,6 @@ head
       });
 
 
-
 .container-fluid.background-opacity.home
     .container-fluid
         .row
@@ -217,8 +216,23 @@ section.section-3
                 | #{section2Book4AboutTitle}
             strong
                 a(style='text-decoration: none;' href='#') LEARN MORE
+        .container
+            h1.text-center.fs-1 BOOKS
+                .row
+                    if books && books.length
+                        each book in books
+                            .col-md-4
+                                .card.mb-4(data-aos='zoom-in')
+                                    img.card-img-top.w-50.h-50.m-auto.pt-3(src=book.cover, alt=book.title)
+                                    .card-body
+                                        h5.card-title= book.title
+                                        p.card-text= book.description
+
+                    else
+                        p No books available             
     .container-fluid.text-center.mt-5.pb-4
-        button.btn.bg-success.text-white VIEW ALL BOOKS
+        a(href="/books") 
+            button.btn.bg-success.text-white VIEW ALL BOOKS
 section.section-8.bg-light
     .container-fluid.pt-5(style='display: flex;')
         .container.text-center

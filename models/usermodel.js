@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   dateJoined: {
     type: Date,
     default: Date.now // Automatically set to the current date when a user is created
-  }
+  },
 });
 
 const User = mongoose.model('User', userSchema);

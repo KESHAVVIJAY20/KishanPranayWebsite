@@ -21,10 +21,17 @@ body {
   .content {
     flex-grow: 1;
     padding: 20px;
+    overflow-y: scroll;
   }
   .section {
     display: none;
   }
   .section.active {
     display: block;
+  }
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Adjust based on your layout */
   }
